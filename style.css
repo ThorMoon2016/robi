@@ -1692,3 +1692,16 @@ body {
         margin-top: -5px; /* Smanjite razmak između slike i vrha boxa */
         margin-left: 25px;
     }
+
+    /* Stilizacija slika proizvoda u mobilnoj verziji */
+@media only screen and (max-width: 768px) {
+    .product-row {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .product {
+        width: 48%; /* Postavite širinu proizvoda na 48% kako bi se prikazala 2 proizvoda u jednom redu */
+        margin-bottom: 20px;
+    }
+}
