@@ -18,12 +18,20 @@ body {
     margin-top: 200px;
 }
 
+
+@media (max-width: 768px) {
+    .category {
+        text-align: center;
+        margin-top: 450px;
+    }
+}
+
 /* Stilizacija slika proizvoda */
 .product-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-top: 20px;
+    
 }
 
 .product-row {
@@ -43,6 +51,9 @@ body {
     object-fit: cover;
     margin-right: 80px; /* Dodaje razmak između slika */
 }
+
+
+
 
 /* Ukloni razmak sa posljednje slike u redu */
 .product:last-child img {
@@ -172,7 +183,7 @@ header {
     .menu {
         display: none;
         position: fixed; /* Fiksirajte meni na ekranu */
-        top:112px ;
+        top:70px ;
         left: 0px;
         width: 100%;
         height: 100%;
@@ -1076,7 +1087,7 @@ body {
 }
 
 .view-all-link a {
-    color: #f590d6; /* Postavljanje roze boje za link */
+    color: #f51010; /* Postavljanje roze boje za link */
     text-decoration: none; /* Uklanjanje podvučenosti linka */
     font-weight: bold; /* Podešavanje debljine fonta */
 }
@@ -1677,7 +1688,7 @@ body {
         width: calc(42% - 5px); /* Postavite širinu boxa na 50% širine ekrana s malim razmakom */
         
         margin: 3px; /* Dodajte malo unutarnjeg razmaka između boxova */
-        transform: translateY(300px) translateX(-4px) ; 
+        transform: translateY(650px) translateX(-4px) ; 
     }
 }
 
@@ -1693,15 +1704,25 @@ body {
         margin-left: 25px;
     }
 
-    /* Stilizacija slika proizvoda u mobilnoj verziji */
+
+
+  /* Stilizacija slika proizvoda u mobilnoj verziji */
 @media only screen and (max-width: 768px) {
     .product-row {
-        flex-wrap: wrap;
-        justify-content: space-between;
+        flex-wrap: wrap; /* Omogućavamo da se elementi prelome na novi red */
+        justify-content: space-between; /* Rasporedimo elemente ravnomerno po redu */
     }
 
     .product {
-        width: 48%; /* Postavite širinu proizvoda na 48% kako bi se prikazala 2 proizvoda u jednom redu */
-        margin-bottom: 20px;
+        width: 48%; /* Postavljamo širinu proizvoda na 48% kako bi se prikazala 2 proizvoda u jednom redu */
+        margin-bottom: 20px; /* Dodajemo razmak između svakog proizvoda */
+        transform: none; /* Resetujemo transformaciju kako bi elementi bili poravnati */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .product img {
+        max-width: 80%; /* Smanjimo maksimalnu širinu slika na 80% širine roditeljskog elementa */
+        height: auto; /* Očuvamo proporcije slika */
     }
 }
